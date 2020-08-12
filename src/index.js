@@ -1,8 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+// TODO: consider removing/updating this
 import "./index.css";
-import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+
+// Components
+import App from "components/App";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +14,6 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+// To learn more about service workers and caching:
+// https://create-react-app.dev/docs/making-a-progressive-web-app/
 serviceWorker.unregister();
