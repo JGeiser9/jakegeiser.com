@@ -1,16 +1,9 @@
 import React from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Box,
-  Link,
-  Typography,
-} from "@material-ui/core";
-import { Menu } from "@material-ui/icons";
+import { AppBar, Toolbar, Box, Container } from "@material-ui/core";
+// import { Menu } from "@material-ui/icons";
 import { withStyles } from "@material-ui/core/styles";
 
-// import Logo from "components/icons/Logo";
+import Logo from "components/icons/Logo";
 
 // TODO: move styles into a shared/theme folder
 const styles = (theme) => ({
@@ -35,16 +28,16 @@ const styles = (theme) => ({
 const Navbar = withStyles(styles)(({ classes, theme }) => (
   <AppBar position="fixed" className={classes.navbar}>
     <Toolbar>
-      <IconButton edge="start" aria-label="menu">
+      {/* <IconButton edge="start" aria-label="menu">
         <Menu />
-      </IconButton>
+      </IconButton> */}
 
       {/* Implements in the side bar */}
-      {/* <Box>
+      <Box>
         <Logo />
-      </Box> */}
+      </Box>
 
-      <Box
+      {/* <Box
         display="flex"
         justifyContent="flex-end"
         className={classes.linksContainer}
@@ -92,12 +85,13 @@ const Navbar = withStyles(styles)(({ classes, theme }) => (
               rel="noopener"
               className={classes.link}
               underline="none"
+              disabled
             >
               Contact
             </Link>
           </Box>
         </Typography>
-      </Box>
+      </Box> */}
     </Toolbar>
   </AppBar>
 ));

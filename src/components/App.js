@@ -8,7 +8,6 @@ import Hero from "components/sections/Hero";
 function App() {
   return (
     <React.Fragment>
-      {/* Material UI CSS Reset */}
       <CssBaseline />
       <Navbar />
       <Hero />

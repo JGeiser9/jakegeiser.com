@@ -1,6 +1,9 @@
 import React from "react";
 import { Box, Button, Container, Link, Typography } from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles, useTheme } from "@material-ui/core/styles";
+
+// Hooks
+import useWindowSize from "hooks/useWindowSize";
 
 // Images
 import { Developer } from "components/svg";
@@ -18,6 +21,9 @@ const styles = (theme) => ({
       maxWidth: "350px",
     },
   },
+  heroText: {
+    fontWeight: 400,
+  },
   socialButton: {
     margin: "0 8px",
     padding: "0",
@@ -31,59 +37,70 @@ const styles = (theme) => ({
   },
 });
 
-const Hero = withStyles(styles)(({ classes }) => (
-  <Container>
-    <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="center"
-      className={classes.heroBox}
-      mt={8}
-    >
-      <Container className={classes.heroImage}>
-        <Developer />
-      </Container>
-      <Typography variant="h2">
-        <Box mt={2}>Jake Geiser</Box>
-      </Typography>
-      <Typography variant="h5">
-        <Box mb={3}>Software Developer</Box>
-      </Typography>
-      <Box display="flex">
-        <Button
-          variant="outlined"
-          color="primary"
-          className={classes.socialButton}
+const Hero = withStyles(styles)(({ classes }) => {
+  const theme = useTheme();
+  const windowSize = useWindowSize();
+
+  return (
+    <Container>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        className={classes.heroBox}
+        mt={8}
+      >
+        <Container className={classes.heroImage}>
+          <Developer />
+        </Container>
+        <Typography
+          variant={windowSize.width > theme.breakpoints.values.sm ? "h2" : "h3"}
+          className={classes.heroText}
         >
-          <Link
-            href="https://github.com/JGeiser9"
-            target="_blank"
-            rel="noopener"
-            className={classes.socialLink}
-            underline="none"
-          >
-            Github
-          </Link>
-        </Button>
-        <Button
-          variant="outlined"
-          color="primary"
-          className={classes.socialButton}
+          <Box mt={2}>Jake Geiser</Box>
+        </Typography>
+        <Typography
+          variant={windowSize.width > theme.breakpoints.values.sm ? "h5" : "h6"}
+          className={classes.heroText}
         >
-          <Link
-            href="https://www.linkedin.com/in/jakegeiser/"
-            target="_blank"
-            rel="noopener"
-            className={classes.socialLink}
-            underline="none"
+          <Box mb={5}>Software Developer</Box>
+        </Typography>
+        <Box display="flex">
+          <Button
+            variant="outlined"
+            color="primary"
+            className={classes.socialButton}
           >
-            LinkedIn
-          </Link>
-        </Button>
+            <Link
+              href="https://github.com/JGeiser9"
+              target="_blank"
+              rel="noopener"
+              className={classes.socialLink}
+              underline="none"
+            >
+              Github
+            </Link>
+          </Button>
+          <Button
+            variant="outlined"
+            color="primary"
+            className={classes.socialButton}
+          >
+            <Link
+              href="https://www.linkedin.com/in/jakegeiser/"
+              target="_blank"
+              rel="noopener"
+              className={classes.socialLink}
+              underline="none"
+            >
+              LinkedIn
+            </Link>
+          </Button>
+        </Box>
       </Box>
-    </Box>
-  </Container>
-));
+    </Container>
+  );
+});
 
 export default Hero;
