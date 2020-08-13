@@ -1,5 +1,19 @@
 import React from "react";
+import { CssBaseline } from "@material-ui/core";
 
-export default function App() {
-  return <h1>Hello World</h1>;
+// Components
+import Navbar from "components/navigation/Navbar";
+import Hero from "components/sections/Hero";
+
+function App() {
+  return (
+    <React.Fragment>
+      {/* Material UI CSS Reset */}
+      <CssBaseline />
+      <Navbar />
+      <Hero />
+    </React.Fragment>
+  );
 }
+
+export default App;
