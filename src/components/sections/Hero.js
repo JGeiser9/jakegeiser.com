@@ -8,7 +8,7 @@ import { Developer } from "components/svg";
 // TODO: move styles into a shared/theme folder
 const styles = (theme) => ({
   heroBox: {
-    minHeight: "600px",
+    minHeight: "calc(100vh - 64px)",
   },
   heroImage: {
     [theme.breakpoints.down("sm")]: {
@@ -24,6 +24,10 @@ const styles = (theme) => ({
   },
   socialLink: {
     padding: "5px 15px",
+    color: theme.palette.primary.light,
+    "&:hover": {
+      color: theme.palette.primary.dark,
+    },
   },
 });
 
@@ -35,7 +39,7 @@ const Hero = withStyles(styles)(({ classes }) => (
       alignItems="center"
       justifyContent="center"
       className={classes.heroBox}
-      mt={11}
+      mt={8}
     >
       <Container className={classes.heroImage}>
         <Developer />
@@ -57,6 +61,7 @@ const Hero = withStyles(styles)(({ classes }) => (
             target="_blank"
             rel="noopener"
             className={classes.socialLink}
+            underline="none"
           >
             Github
           </Link>
@@ -71,6 +76,7 @@ const Hero = withStyles(styles)(({ classes }) => (
             target="_blank"
             rel="noopener"
             className={classes.socialLink}
+            underline="none"
           >
             LinkedIn
           </Link>
