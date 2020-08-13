@@ -10,6 +10,8 @@ import {
 import { Menu } from "@material-ui/icons";
 import { withStyles } from "@material-ui/core/styles";
 
+// import Logo from "components/icons/Logo";
+
 // TODO: move styles into a shared/theme folder
 const styles = (theme) => ({
   navbar: {
@@ -23,9 +25,9 @@ const styles = (theme) => ({
     flexGrow: 1,
   },
   link: {
-    color: theme.palette.text.primary,
+    color: theme.palette.primary.light,
     "&:hover": {
-      color: theme.palette.primary.main,
+      color: theme.palette.primary.dark,
     },
   },
 });
@@ -36,35 +38,61 @@ const Navbar = withStyles(styles)(({ classes, theme }) => (
       <IconButton edge="start" aria-label="menu">
         <Menu />
       </IconButton>
+
+      {/* Implements in the side bar */}
+      {/* <Box>
+        <Logo />
+      </Box> */}
+
       <Box
         display="flex"
         justifyContent="flex-end"
         className={classes.linksContainer}
       >
         <Typography component="div">
-          <Box fontWeight="fontWeightRegular" letterSpacing={1} mx={1.5}>
-            <Link href="#" rel="noopener" className={classes.link}>
+          <Box fontWeight="fontWeightRegular" letterSpacing={2} mx={2}>
+            <Link
+              href="#"
+              rel="noopener"
+              className={classes.link}
+              underline="none"
+            >
               About
             </Link>
           </Box>
         </Typography>
         <Typography component="div">
-          <Box fontWeight="fontWeightRegular" letterSpacing={1} mx={1.5}>
-            <Link href="#" rel="noopener" className={classes.link}>
+          <Box fontWeight="fontWeightRegular" letterSpacing={2} mx={2}>
+            <Link
+              href="#"
+              rel="noopener"
+              className={classes.link}
+              underline="none"
+            >
               Work
             </Link>
           </Box>
         </Typography>
         <Typography component="div">
-          <Box fontWeight="fontWeightRegular" letterSpacing={1} mx={1.5}>
-            <Link href="#" rel="noopener" className={classes.link}>
+          <Box fontWeight="fontWeightRegular" letterSpacing={2} mx={2}>
+            <Link
+              href="#"
+              rel="noopener"
+              className={classes.link}
+              underline="none"
+            >
               Blog
             </Link>
           </Box>
         </Typography>
         <Typography component="div">
-          <Box fontWeight="fontWeightRegular" letterSpacing={1} mx={1.5}>
-            <Link href="#" rel="noopener" className={classes.link}>
+          <Box fontWeight="fontWeightRegular" letterSpacing={2} mx={2}>
+            <Link
+              href="#"
+              rel="noopener"
+              className={classes.link}
+              underline="none"
+            >
               Contact
             </Link>
           </Box>
