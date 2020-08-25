@@ -29,28 +29,20 @@ const styles = (theme) => ({
 
 const cards = [
   {
-    title: "Card 1",
-    content: "This is example project number 1",
+    title: "V2",
+    content: "This website :)",
   },
   {
-    title: "Card 2",
-    content: "This is example project number 2",
+    title: "V1",
+    content: "The previous version of jakegeiser.com",
   },
   {
-    title: "Card 3",
-    content: "This is example project number 3",
+    title: "@Mpls_cycling",
+    content: "A twitter bot helping fight bicycle theft on a daily basis",
   },
   {
-    title: "Card 4",
-    content: "This is example project number 4",
-  },
-  {
-    title: "Card 5",
-    content: "This is example project number 5",
-  },
-  {
-    title: "Card 6",
-    content: "This is example project number 6",
+    title: "Calculator with Friends",
+    content: "It's like a real time chat, but for calculators",
   },
 ];
 

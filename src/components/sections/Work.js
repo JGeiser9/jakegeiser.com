@@ -26,24 +26,25 @@ const styles = (theme) => ({
 
 const cards = [
   {
-    title: "Card 1",
-    content: "This is example project number 1",
+    title: "HNScan",
+    content: "The go to block explorer for the Handshake community",
   },
   {
-    title: "Card 2",
-    content: "This is example project number 2",
+    title: "HNSPool",
+    content: "The first mining pool for the Handshake blockchain",
   },
   {
-    title: "Card 3",
-    content: "This is example project number 3",
+    title: "USL",
+    content:
+      "The Urkel Shared Library for components, blocks, hooks, charts, and icons",
   },
   {
-    title: "Card 4",
-    content: "This is example project number 4",
+    title: "Handshake Alliance",
+    content: "An open-source resource for the Handshake community",
   },
   {
-    title: "Card 5",
-    content: "This is example project number 5",
+    title: "White Label Store",
+    content: "A Shopify backed e-commerce store",
   },
 ];
 
