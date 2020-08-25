@@ -12,8 +12,8 @@ import { withStyles } from "@material-ui/core/styles";
 const styles = (theme) => ({
   wrapper: {
     maxWidth: "900px",
-    width: "85%",
-    margin: "50px auto",
+    width: "75%",
+    margin: "0 auto 100px auto",
     [theme.breakpoints.up("sm")]: {
       width: "95%",
     },
@@ -49,7 +49,7 @@ const cards = [
 const Projects = withStyles(styles)(({ classes }) => {
   const buildCards = () => {
     return cards.map((el) => (
-      <Grid item xs={6} sm={4}>
+      <Grid item xs={12} sm={6} md={4}>
         <Card className={classes.card}>
           <CardContent>
             <Typography variant="h6" component="h6">
