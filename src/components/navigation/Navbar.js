@@ -25,7 +25,7 @@ const styles = (theme) => ({
   },
 });
 
-const Navbar = withStyles(styles)(({ classes, theme }) => (
+const Navbar = withStyles(styles)(({ classes }) => (
   <AppBar position="fixed" className={classes.navbar}>
     <Toolbar>
       {/* <IconButton edge="start" aria-label="menu">

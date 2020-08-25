@@ -11,7 +11,8 @@ import { Developer } from "components/svg";
 // TODO: move styles into a shared/theme folder
 const styles = (theme) => ({
   heroBox: {
-    minHeight: "calc(100vh - 64px)",
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(10),
   },
   heroImage: {
     [theme.breakpoints.down("sm")]: {
