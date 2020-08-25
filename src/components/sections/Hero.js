@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Button, Container, Link, Typography } from "@material-ui/core";
+import {
+  Box,
+  Button,
+  Container,
+  Link,
+  Typography,
+  Divider,
+} from "@material-ui/core";
 import { withStyles, useTheme } from "@material-ui/core/styles";
 
 // Hooks
@@ -10,9 +17,11 @@ import { Developer } from "components/svg";
 
 // TODO: move styles into a shared/theme folder
 const styles = (theme) => ({
+  container: {
+    padding: theme.spacing(8, 0, 10, 0),
+  },
   heroBox: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(10),
+    padding: theme.spacing(8, 0, 10, 0),
   },
   heroImage: {
     [theme.breakpoints.down("sm")]: {
@@ -36,6 +45,14 @@ const styles = (theme) => ({
       color: theme.palette.primary.dark,
     },
   },
+  divider: {
+    maxWidth: "25%",
+    margin: "0 auto",
+    height: "2px",
+    [theme.breakpoints.up("sm")]: {
+      maxWidth: "12%",
+    },
+  },
 });
 
 const Hero = withStyles(styles)(({ classes }) => {
@@ -43,7 +60,7 @@ const Hero = withStyles(styles)(({ classes }) => {
   const windowSize = useWindowSize();
 
   return (
-    <Container>
+    <Container className={classes.container}>
       <Box
         display="flex"
         flexDirection="column"
@@ -100,6 +117,7 @@ const Hero = withStyles(styles)(({ classes }) => {
           </Button>
         </Box>
       </Box>
+      <Divider light={true} variant="middle" className={classes.divider} />
     </Container>
   );
 });
