@@ -21,6 +21,14 @@ const styles = (theme) => ({
   card: {
     minWidth: "175px",
     height: "250px",
+    backgroundColor: "hsl(231, 48%, 48%)",
+    color: theme.palette.primary.contrastText,
+    cursor: "pointer",
+    transition: "all .2s ease-in-out",
+    "&:hover": {
+      transform: "scale(1.05)",
+      backgroundColor: "hsl(231, 48%, 40%)",
+    },
   },
   title: {
     margin: "10px 0 20px",
