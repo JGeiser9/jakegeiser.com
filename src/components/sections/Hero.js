@@ -40,7 +40,7 @@ const styles = (theme) => ({
   },
   socialLink: {
     padding: "5px 15px",
-    color: theme.palette.primary.light,
+    color: theme.palette.primary.main,
     "&:hover": {
       color: theme.palette.primary.dark,
     },
