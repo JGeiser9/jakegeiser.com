@@ -72,15 +72,15 @@ npm start
 
 # SVG Images
 
-Manually converting svg images to React components is a tedious process. This project implements a cli tool to convert them for you.
+Manually converting SVG images to React components is a tedious process. This project implements `@svgr/cli` to convert them for you
 
 ### Adding New Images
 
-Add the `.svg` file to to the `components/svg` folder.
+Add the `.svg` file to to the `components/svg` folder
 
 ### Converting Images
 
-Running the following command will look for all `.svg` files and automatically convert them to React components and export them from `components/svg/index.js`
+Running the following command will look for all `.svg` files, convert them to React components, optimize them, and export them from `components/svg/index.js`
 
 ```
 npm run convert
